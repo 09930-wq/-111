@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Blossom Link Saga</title>
+<meta name="theme-color" content="#4caf2f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/title.css">
+<link rel="stylesheet" href="css/map.css">
+<link rel="stylesheet" href="css/game.css">
+<link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+<div id="app">
+  <!-- หน้าเริ่มเกม -->
+  <section id="title" class="screen active">
+    <div class="logo"><span class="l1">Blossom</span><span class="l2">Link</span><b>SAGA</b></div>
+    <div id="mascot">
+      <svg viewBox="0 0 140 170">
+        <ellipse cx="38" cy="95" rx="26" ry="14" fill="#dff4ff" opacity=".85" transform="rotate(-30 38 95)"/>
+        <ellipse cx="102" cy="95" rx="26" ry="14" fill="#dff4ff" opacity=".85" transform="rotate(30 102 95)"/>
+        <ellipse cx="70" cy="128" rx="28" ry="32" fill="#f5c542"/>
+        <rect x="42" y="120" width="56" height="8" fill="#5a3a1a"/><rect x="44" y="136" width="52" height="8" fill="#5a3a1a"/>
+        <path d="M58 40 Q50 12 38 8M82 40 Q90 12 102 8" stroke="#5a3a1a" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <circle cx="38" cy="8" r="5" fill="#d6321f"/><circle cx="102" cy="8" r="5" fill="#d6321f"/>
+        <circle cx="70" cy="68" r="44" fill="#d6321f"/><path d="M26 74 Q22 112 40 112 L40 80Z M114 74 Q118 112 100 112 L100 80Z" fill="#c42a18"/>
+        <circle cx="70" cy="76" r="33" fill="#ffd9b8"/>
+        <path d="M37 66 Q70 20 103 66 Q80 46 37 66Z" fill="#e8402a"/>
+        <circle cx="57" cy="76" r="8" fill="#fff"/><circle cx="83" cy="76" r="8" fill="#fff"/>
+        <circle cx="58" cy="77" r="5" fill="#2a6fd6"/><circle cx="84" cy="77" r="5" fill="#2a6fd6"/>
+        <circle cx="56" cy="75" r="1.8" fill="#fff"/><circle cx="82" cy="75" r="1.8" fill="#fff"/>
+        <circle cx="47" cy="90" r="5" fill="#ff9a9a" opacity=".6"/><circle cx="93" cy="90" r="5" fill="#ff9a9a" opacity=".6"/>
+        <path d="M62 92 Q70 99 78 92" stroke="#a0402a" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div id="flowerRow"></div>
+    <div class="titleBtns">
+      <button id="btnPlay" class="big">เล่นเลย</button>
+      <button id="btnInstall" class="small" hidden>ติดตั้งแอป</button>
+    </div>
+    <button class="round snd" data-snd>🔊</button>
+  </section>
+
+  <!-- แผนที่ด่าน -->
+  <section id="map" class="screen">
+    <header class="bar"><button class="round" id="mapHome">⌂</button><h2>เลือกด่าน</h2><button class="round snd" data-snd>🔊</button></header>
+    <div id="mapScroll"><div id="mapInner"></div></div>
+    <footer id="mapBoost"></footer>
+  </section>
+
+  <!-- หน้าเล่น -->
+  <section id="play" class="screen">
+    <header id="hud">
+      <div id="movesBox"><small>ครั้ง</small><b id="moves">0</b></div>
+      <div id="scoreBox">
+        <div id="score">0</div>
+        <div id="bar"><div id="fill"></div><i class="mk" style="left:55.5%"></i><i class="mk" style="left:77.7%"></i><i class="mk" style="left:100%"></i></div>
+        <div id="goal"></div>
+      </div>
+      <div id="cupBox"><span>🏆</span><b id="target">0</b></div>
+      <button class="round" id="btnPause">⏸</button>
+    </header>
+    <div id="boardWrap"><canvas id="board"></canvas><div id="toast"></div></div>
+    <footer id="tray">
+      <button data-k="shovel"><em>⛏️</em><span>พลั่ว</span><u>0</u></button>
+      <button data-k="bomb"><em>💣</em><span>ระเบิด</span><u>0</u></button>
+      <button data-k="shuffle"><em>🔀</em><span>สลับ</span><u>0</u></button>
+      <button data-k="moves"><em>➕</em><span>+5 ครั้ง</span><u>0</u></button>
+      <button id="btnFinish" hidden>จบด่าน ✔</button>
+    </footer>
+  </section>
+  <div id="modal"></div>
+</div>
+<script src="js/core/store.js"></script>
+<script src="js/data/levels.js"></script>
+<script src="js/audio/audio.js"></script>
+<script src="js/graphics/sprites.js"></script>
+<script src="js/core/game.js"></script>
+<script src="js/graphics/render.js"></script>
+<script src="js/graphics/mapart.js"></script>
+<script src="js/ui/ui.js"></script>
+<script src="js/ui/map.js"></script>
+<script src="js/ui/hud.js"></script>
+<script src="js/ui/result.js"></script>
+<script>BB.ui.init();</script>
+</body>
+</html>

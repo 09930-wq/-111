@@ -1,0 +1,16 @@
+/* หน้าต่าง */
+#modal{position:absolute;inset:0;background:rgba(20,40,10,.6);display:none;align-items:center;justify-content:center;z-index:9}
+#modal.show{display:flex}
+.card{background:linear-gradient(#fff8e0,#ffe9b0);border:6px solid #8a4a0a;border-radius:26px;padding:1.2rem 1.6rem 1.4rem;text-align:center;min-width:270px;max-width:88%;box-shadow:0 12px 30px rgba(0,0,0,.5);display:flex;flex-direction:column;align-items:center;animation:pop .3s}
+@keyframes pop{from{transform:scale(.6);opacity:0}}
+.card h2{margin:0 0 .3rem;font-size:1.9rem;color:#d6329a;text-shadow:0 2px 0 #fff}
+.card p{margin:.3rem 0}.sm{font-size:.85rem;color:#7a5a30}
+.stars{display:flex;gap:6px}.stars i{font-style:normal;font-size:3.4rem;color:#cdbb95;text-shadow:0 3px 0 #a89870}
+.stars i.on{color:#ffd400;text-shadow:0 3px 0 #b87a00;animation:starIn .6s both}
+@keyframes starIn{from{transform:scale(0) rotate(-180deg)}60%{transform:scale(1.4) rotate(10deg)}to{transform:scale(1)}}
+
+/* หน้าจบด่าน */
+.ribbon{background:linear-gradient(#ff7ac8,#d6329a);color:#fff;font-size:1.5rem;font-weight:900;padding:.2em 1.4em;margin:-2.1rem 0 .6rem;border:4px solid #8a1a5a;border-radius:12px;box-shadow:0 5px 0 #8a1a5a;text-shadow:0 2px 0 #8a1a5a}
+.perfect{color:#e8402a;font-weight:900;font-size:1.15rem;animation:pulse2 1s infinite}
+.cf{position:absolute;top:-90px;width:46px;pointer-events:none;animation:fall 3.6s linear infinite}
+@keyframes fall{to{transform:translateY(115vh) rotate(540deg)}}

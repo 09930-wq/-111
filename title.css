@@ -1,0 +1,13 @@
+/* หน้าเริ่ม */
+#title{background:radial-gradient(ellipse at 50% 100%,#2f8a22 0 30%,transparent 60%),linear-gradient(#4aa8e8 0,#a8dcf6 45%,#6cc24a 46%,#2f8a22);align-items:center;justify-content:space-between;padding-top:6vh}
+.logo{display:flex;flex-direction:column;align-items:center;line-height:.85;text-align:center;background:#fffaf0;padding:.6em 1.2em .9em;border-radius:46% 54% 50% 50%/60% 60% 40% 40%;border:5px solid #f4a8c0;box-shadow:0 8px 0 #d6709a,0 14px 20px rgba(0,0,0,.25);transform:rotate(-2deg)}
+.logo .l1,.logo .l2{font-size:clamp(2.6rem,12vw,4.2rem);font-weight:900;color:#e8407a;-webkit-text-stroke:2px #fff;paint-order:stroke fill;text-shadow:0 4px 0 #a8205a,0 6px 0 rgba(0,0,0,.15)}
+.logo .l2{color:#f08a0a;text-shadow:0 4px 0 #a85a05}
+.logo b{background:#4caf2f;color:#fff;font-size:1.3rem;letter-spacing:.2em;padding:.1em .9em;border-radius:50% 50% 50% 50%/80% 80% 20% 20%;margin-top:.3rem;border:3px solid #2f7a1a}
+#mascot{width:min(42vw,200px);animation:hover 2.4s ease-in-out infinite;filter:drop-shadow(0 8px 6px rgba(0,0,0,.3))}
+@keyframes hover{50%{transform:translateY(-14px) rotate(3deg)}}
+#flowerRow{display:flex;justify-content:center;margin-bottom:-8px}
+#flowerRow img{width:17vw;max-width:90px;animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px) scale(1.05)}}
+.titleBtns{display:flex;flex-direction:column;align-items:center;margin-bottom:9vh}
+.snd{position:absolute;top:calc(env(safe-area-inset-top) + 10px);right:10px}
